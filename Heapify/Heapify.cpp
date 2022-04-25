@@ -63,8 +63,12 @@ void Priority_que<T>::heapify(int n, int i) {
 }
 template<typename T>
 void Priority_que<T>::heapify_down_to_up(int n) {
-	for (int i = n / 2; i >= 0; --i) {
-		heapify(n, i);
+	int s = n - 1, f = (s - 1) / 2;
+	while (f >= 0 && compare(que[s], que[f]))
+	{
+		swap(que[f], que[s]);
+		s = f;
+		f = (s - 1) / 2;
 	}
 }
 int testmain() {
