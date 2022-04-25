@@ -2,7 +2,11 @@
 #include <vector>
 
 using namespace std;
-
+/*
+  第一行表示输入的数据
+  第二行表示当前堆顶的元素
+  第三行表示输出的顺序
+*/
 template<typename T>
 class Priority_que {
 private:
